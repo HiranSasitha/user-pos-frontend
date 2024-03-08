@@ -1,10 +1,28 @@
-
+.p1 {
+  color: white; 
+  letter-spacing: 6px;
+  font-size: 30px;
+  font-weight: bolder 
+  
+}
 .d3{
   color: white;
   background-color: rgb(59, 50, 50);
 }
 .d2{
   background-color: rgb(192, 184, 184);
+}
+
+.navbar.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+
+.custom-table.table {
+  width: 90%; 
+  margin: 0 auto;
+  
 }
 
 

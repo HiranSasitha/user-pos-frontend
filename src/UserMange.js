@@ -55,7 +55,7 @@ const UserMange = ()=>{
         </div>
       </nav>
       <div className="text-center my-4">
-                <h2 className="k1">Manage Employee</h2>
+                <h2 className="k1">Manage Users</h2>
             </div>
 
             <div class="card mx-5 mb-5 border border-secondary rounded-3">
@@ -79,7 +79,7 @@ const UserMange = ()=>{
 
                        
 
-                        <button type="submit" className="btn btn-success">Save Employee</button>
+                        <button type="submit" className="btn btn-success">Save User</button>
                     </form>
 
                 </div>

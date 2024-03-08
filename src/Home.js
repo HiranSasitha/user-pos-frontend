@@ -4,6 +4,18 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
 
+    const[user,setUser] = useState(null);
+    useEffect(() => {
+        getAllUsers();
+      }, [])
+
+    const getAllUsers = async()=>{
+        const response = await axios.get("http://localhost/user-pos/index");
+        console.log(response);
+        console.log(response.data);
+        setUser(response.data);
+    }
+
 
   return (
     <>
@@ -31,6 +43,42 @@ const Home = () => {
           </div>
         </div>
       </nav>
+
+      <div className="text-center my-4">
+        <h2 className="k1">User Details</h2>
+      </div>
+
+      <table className="custom-table table table-success table-striped  mb-5 ">
+        <thead>
+          <tr>
+            <th>Name</th>
+            
+            <th>Email</th>
+            <th>Details</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {user && user.map((us) =>
+            <tr>
+              <td>{us.name}</td>
+              <td>{us.email}</td>
+             
+               
+              <td>
+                <Link type='button' class="btn btn-outline-primary" to={`/user/${us.id}`} >
+                  Details
+                </Link>
+              </td>
+
+            </tr>
+
+
+          )}
+
+        </tbody>
+      </table>
+
       <div className="container-fluid">
                 <div className='d2 row'>
                     <div className=' text-center'>
